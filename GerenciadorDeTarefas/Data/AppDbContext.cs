@@ -1,8 +1,11 @@
-using Microsoft.EntityFrameworkCore;
-using GerenciadorDeTarefas.Models;
-
-public class AppDbContext : DbContext
+namespace GerenciadorDeTarefas.Data
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-    public DbSet<Tarefa> Tarefas { get; set; }
+    using Microsoft.EntityFrameworkCore;
+    using GerenciadorDeTarefas.Models;
+
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+        public DbSet<Tarefa> Tarefas { get; set; }
+    }
 }
